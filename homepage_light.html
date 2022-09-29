@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Tate Rowney - Homepage</title>
+    <link rel="shortcut icon" href="favicon.ico" type=image/x-icon>
+    <link rel="stylesheet" href="TateRowney_light.css" type="text/css">
+    <script>
+      if (typeof(Storage) == "undefined") {
+        alert("Your browser doesn't have local storage enabled. Sorry!")
+      }
+      function switchToDark() {
+        localStorage.theme = "dark";
+        location.replace("file:///Users/trowney/Desktop/sample.html");
+      }
+      if (localStorage.theme=="dark"){
+        location.replace("file:///Users/trowney/Desktop/sample.html");
+      }
+    </script>
+  </head>
+  <body>
+    <div class="sidebar" id="sidebar">
+      <a class="active">Home</a>
+      <br>
+      <a>Other Pages</a>
+    </div>
+    <div class="content">
+      <u><h1 id="page_title">Tate Rowney</h1></u>
+      <p class="subtitle"><strong>This is my elevator pitch!</strong></p>
+      <br>
+      <div class="image_container">
+        <img id="homepage_photo" src="Stable_diffusion.png" alt="A photo of myself">
+      </div>
+      <p>some text</p>
+      <br>
+      <p>some more text</p>
+    </div>
+    <footer class="footer">
+      <button type="button" class="changemode_button" onclick="switchToDark()">Change to Dark Mode</button>
+    </footer>
+  </body>
+</html>
